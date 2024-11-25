@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "TeacherTracking"
 include(":app")
- 
+include(":data:model")
