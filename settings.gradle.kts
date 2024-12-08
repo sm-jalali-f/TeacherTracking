@@ -22,3 +22,6 @@ dependencyResolutionManagement {
 rootProject.name = "TeacherTracking"
 include(":app")
 include(":data:model")
+include(":data:network")
+include(":feature:login")
+include(":data:database")
