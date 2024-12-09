@@ -21,7 +21,7 @@ import androidx.room.PrimaryKey
     ]
 )
 data class EventEntity(
-    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") val id: Int,
+    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") val id: Long,
     @ColumnInfo(name = "date") val date: String,
     @ColumnInfo(name = "time") val time: String,
     @ColumnInfo(name = "cost") val cost: Int,
