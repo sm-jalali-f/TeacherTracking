@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("com.diffplug.spotless") version "7.0.0.BETA4"
+    alias(libs.plugins.hilt.android)
+    kotlin("kapt")
 }
 
 android {
@@ -20,7 +22,9 @@ android {
             useSupportLibrary = true
         }
     }
-
+    kapt {
+        correctErrorTypes = true
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -68,9 +72,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 
 
 }
+
 spotless {
     kotlin {
         target("**/*.kt", "**/*.kts")
