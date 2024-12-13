@@ -62,3 +62,10 @@ data
 domain
 features
 
+## Network
+
+retrofit
+
+## retrofit result to json
+Gson, Moshi, Kotlin Serialization
+
