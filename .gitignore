@@ -97,6 +97,8 @@ obj/
 .idea/navEditor.xml
 .idea/deploymentTargetSelector.xml
 .idea/other.xml
+.idea/studiobot.xml
+.idea/inspectionProfiles/Project_Default.xml
 
 # Legacy Eclipse project files
 .classpath
