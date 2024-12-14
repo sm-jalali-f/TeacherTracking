@@ -12,11 +12,14 @@ import kotlinx.coroutines.flow.Flow
 interface ClubsDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun addClub(club: ClubEntity)
+    suspend fun insert(club: ClubEntity)
 
     @Delete
-    suspend fun deleteClub(club: ClubEntity)
+    suspend fun delete(club: ClubEntity)
 
     @Query("SELECT * FROM clubs")
     fun getAllClubs(): Flow<List<ClubEntity>>
+
+    @Query("SELECT * FROM clubs WHERE id= :clubId")
+    fun getClubById(clubId: Long): ClubEntity
 }
