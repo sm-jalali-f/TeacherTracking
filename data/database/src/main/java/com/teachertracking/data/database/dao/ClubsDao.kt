@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.Flow
 interface ClubsDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(club: ClubEntity)
+    suspend fun insert(club: ClubEntity): Long
 
     @Delete
     suspend fun delete(club: ClubEntity)
